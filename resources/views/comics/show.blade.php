@@ -3,10 +3,10 @@
 @section('content')
     <div class="container d-flex">
         <div class="row">
-            <div class="col-4 text-center">
-                <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
+            <div class="col-6 text-center">
+                <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}" class="h-100">
             </div>
-            <div class="col-8">
+            <div class="col-6 ps-5">
                 <h1>{{ $comic->title }}</h1>
                 <h3>Plot:</h3>
                 <p>{{ $comic->description }}</p>
