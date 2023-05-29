@@ -36,7 +36,7 @@ $links = [
                     <div class="text-center">
                         <img src="{{$comic['thumb']}}" alt="{{$comic['title']}}">
                     </div>
-                    <h5 class="text-white text-center text-uppercase mt-2"><a href="">{{ $comic['title'] }}</a></h5>
+                    <h5 class="text-white text-center text-uppercase mt-2"><a href="{{ route('comics.show', $comic->id)}}">{{ $comic['title'] }}</a></h5>
                 </div>
                 @endforeach
 
