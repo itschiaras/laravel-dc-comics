@@ -32,11 +32,12 @@ $links = [
         <div class="contentContainer container ">
             <div class="row row-cols-1 row-cols-sm-3 row-cols-md-6">
                 @foreach ($comics as $comic)
-                <div class="col pt-5 pb-5">
+                <div class="col pt-5 pb-5 position-relative">
                     <div class="text-center">
                         <img src="{{$comic['thumb']}}" alt="{{$comic['title']}}">
                     </div>
                     <h5 class="text-white text-center text-uppercase mt-2"><a href="{{ route('comics.show', $comic->id)}}">{{ $comic['title'] }}</a></h5>
+                    <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-primary position-absolute bottom-0">Modifica</a>
                 </div>
                 @endforeach
 

@@ -133,7 +133,7 @@ main {
 }
 
 #footer-top {
-    background-image: url(images/footer-bg.jpg);
+    background-image: url(../../public/images/footer-bg.jpg);
     height: 350px;
     color: white;
     overflow: hidden;
@@ -151,7 +151,7 @@ main {
     }
     .img-container {
         height: 350px;
-        background-image: url(images/dc-logo-bg.png);
+        background-image: url(../../public/images/dc-logo-bg.png);
         background-size: cover;
         background-position: center;
     }
