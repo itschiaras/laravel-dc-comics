@@ -41,7 +41,7 @@
                             <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="d-inline-block">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="delete-button btn btn-danger m-0 ms-3">Cancella</button>
+                                <button type="submit" class="delete-button btn btn-danger m-0 ms-3" data-item-title="{{ $comic->title }}">Cancella</button>
                             </form>
                         </div>
 
@@ -49,8 +49,8 @@
                     </div>
                 @endforeach
 
-                <div class="w-100 d-flex justify-content-center">
-                    <button class="text-uppercase border-0">load more</button>
+                <div class="w-100 d-flex justify-content-center pt-4">
+                    <button class="text-uppercase border-0"><a href="{{ route('comics.create')}}">aggiungi</a></button>
                 </div>
             </div>
 
@@ -72,4 +72,5 @@
             </ul>
         </div>
     </div>
+    @include('partials.deleteitem')
 @endsection
