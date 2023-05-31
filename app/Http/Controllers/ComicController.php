@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Comic;
 
+use App\Http\Requests\StoreComicRequest;
+
 class ComicController extends Controller
 {
     /**
@@ -34,14 +36,18 @@ class ComicController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreComicRequest $request)
     {
-        $form_data = $request->all();
+        // $form_data = $request->all();
 
-        $newComic = new Comic();
-        $newComic->fill($form_data);
-        $newComic->save();
+        // $newComic = new Comic();
+        // $newComic->fill($form_data);
+        // $newComic->save();
 
+        // return redirect()->route('comics.show', $newComic->id);
+
+        $form_data = $request->validated();
+        $newComic = Comic::create($form_data);
         return redirect()->route('comics.show', $newComic->id);
     }
 
